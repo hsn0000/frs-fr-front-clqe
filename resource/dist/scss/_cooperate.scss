@@ -1,0 +1,60 @@
+.cooperate {
+    padding: 3% 10% 3% 10%;
+    background-color: #f3f3f9;
+    border-radius: 14px;
+    .cooperate-desc {
+        width: 100%;
+        h1 {
+            color: $there-purple;
+            font-size: xxx-large;
+            font-weight: 600;
+        }
+        span {
+            color: $four-purple;
+        }
+    }
+    .cooperate-form {
+        .input-simple {
+            input {
+                border: none;
+                background-color: $white;
+                padding: 27px;
+                border-radius: 9px;
+                width: 100%;
+                font-weight: 300;
+                font-size: 25px;
+                &:focus {
+                    border: 2px solid $main-purple;
+                }
+            }
+        }
+        .text-message {
+            textarea {
+                border: none;
+                background-color: white;
+                padding: 27px;
+                border-radius: 9px;
+                width: 100%;
+                /* color: #eee; */
+                font-weight: 300;
+                font-size: 25px;
+                height: 243px;
+                &::placeholder {
+                    position: absolute;
+                }
+                &:focus {
+                    border: 2px solid $main-purple;
+                }
+            }
+        }
+        .btn-send {
+            width: 207px;
+            height: 75px;
+            font-size: 25px;
+            background-color: $main-purple;
+            color: $white;
+            border-radius: 10px;
+        }
+
+    }
+}

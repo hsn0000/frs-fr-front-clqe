@@ -1,0 +1,69 @@
+.main-container {
+    position: relative;
+    // border: 1px solid blue;
+    max-width: 1653px;
+    margin: auto;
+}
+/* margin */
+.m-10 {
+    margin: 10rem;
+}
+.my-10 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+.mb-9 {
+    margin-bottom: 5rem;
+}
+.mb-10 {
+    margin-bottom: 6rem;
+}
+.mt-10 {
+    margin-top: 6rem;
+}
+.mt-9-vh {
+    margin-top: 9vw;
+}
+/* color */
+.there-purple {
+    color: $there-purple !important;
+}
+/* button */
+.btn-default-light:hover {
+    color: $main-purple !important;
+    border: 1px solid $main-purple !important;
+    background-color: $white !important;
+    box-shadow: $four-purple !important;
+}
+#progress-scroll-button {
+    position: fixed;
+    bottom: 36px;
+    right: 20px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 50%;
+    // background-color: $main-purple;
+    // visibility: hidden;
+    // animation: 1s all ease;
+    #progress-scroll-value {
+        height: calc(100% - 15px);
+        width: calc(100% - 15px);
+        background-color: $white;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 35px;
+        color: $there-purple;
+        transition: background-color 0.3s ease-out;
+        .fa-arrow-up {
+            font-size: 24px;
+        }
+        &:active {
+            background-color: #ff9c26;
+        }
+    }
+}

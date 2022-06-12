@@ -1,0 +1,133 @@
+// Typography
+$base-font-family: "Heebo", sans-serif;
+$secondary-font-family: "PT Serif", serif;
+$heading-font-family: $base-font-family;
+$mono-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 4px;
+$base-spacing: $base-line-height * 1em;
+// $small-spacing: $base-spacing / 2;
+$small-spacing: 0.4em;
+$base-z-index: 0;
+
+// Colors
+$white: #fff;
+$blue: #477dca;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$soft-gray: #706e6e;
+
+$base-purple : #be00ff;
+$main-purple : #6f16b6;
+$second-purple : #750ec9;
+$there-purple : #3c016a;
+$four-purple : #2e364f;
+
+// 9seedS Colors
+$s9-orange: $main-purple;
+$s9-green: #6ac334;
+
+// Font Colors
+$base-font-color: #343a3f;
+$action-color: $s9-orange;
+$inverted-font-color: $white;
+$acsent-color: #50bc77;
+$light-font-color: $white;
+
+// Border
+$base-border-color: #e3e3e3;
+$light-border-color: $white;
+$dark-border-color: #6f7478;
+$input-stroke: #d0d0d0;
+$base-border: 1px solid $input-stroke;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+$thirt-background-color: #f5f5f5;
+$header-background-color: #343a3f;
+
+// Forms
+$form-box-shadow: none;
+$form-box-shadow-focus: $form-box-shadow,
+  0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Modular Scale
+//$modular-scale-ratio: $golden;
+//$modular-scale-base: 16px;
+
+// Alerts
+$alert-color: #fff6bf !default;
+$error-color: #fbe3e4 !default;
+$notice-color: #e5edf8 !default;
+$success-color: #e6efc2 !default;
+
+// input
+$placeholder-color: #70767b;
+$placeholder-size: 16px;
+
+// alert
+$success-color: #d2f6df;
+$success-font-color: #6ec98f;
+$warning-color: #fff2cf;
+$warning-font-color: #d6b354;
+$info-color: #e2eff8;
+$info-font-color: #6aacd9;
+$error-color: #f5d4c4;
+$error-font-color: #ce7042;
+
+// Disable Prefix for All
+// @include disable-prefix-for-all();
+
+/**
+ * mixin
+ */
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) {
+    margin-right: flex-gutter();
+  }
+  &:nth-child(#{$nth} + 1) {
+    clear: none;
+  }
+}
+
+/// Strips the unit from a number.
+///
+/// @argument {number} $value
+///
+/// @return {number (unitless)}
+///
+/// @example scss
+///   $dimension: strip-unit(10em);
+///
+///   // Output
+///   $dimension: 10;
+
+@function strip-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+.clearfix {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
