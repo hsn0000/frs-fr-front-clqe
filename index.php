@@ -1,8 +1,10 @@
 <?php
-// $target = ;
-// $link = "downloads";
-// symlink($target, $link);
-// echo readlink($link);
-
-require_once dirname(__FILE__) . '/resource/page';
+    if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
+        $uri = 'https://';
+    } else {
+        $uri = 'http://';
+    }
+    $uri .= $_SERVER['HTTP_HOST'];
+    header('Location: '.$uri.'/frs-fr-front-clqe/resource/page/index.html');
+    exit;
 ?>
