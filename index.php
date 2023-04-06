@@ -6,5 +6,5 @@
     }
     $uri .= $_SERVER['HTTP_HOST'];
     header('Location: '.$uri.'/frs-fr-front-clqe/resource/page/index.html');
-    exit;
+    exit();
 ?>
